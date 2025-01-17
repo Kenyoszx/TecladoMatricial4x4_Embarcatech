@@ -15,9 +15,22 @@
 #define C3 2
 #define C4 1
 
+//Protótipos das Funções
+void inicializar();
 
 int main() {
+    
+    inicializar();
+    
+     while (true) {
+      
+    }
+}
+
+void inicializar(){
+    // inicialização dos pinos
     stdio_init_all();
+
     gpio_init(led_pin_red);
     gpio_set_dir(led_pin_red, GPIO_OUT);
 
@@ -53,9 +66,4 @@ int main() {
 
     gpio_init(C4);
     gpio_set_dir(C4, GPIO_IN);
-
-    
-     while (true) {
-      
-    }
 }
