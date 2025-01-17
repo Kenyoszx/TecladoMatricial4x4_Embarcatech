@@ -2,6 +2,7 @@
 #include "pico/stdlib.h"
 
 //definindo funçoes de cada pino
+#define nenhuma -1
 #define led_pin_red 13
 #define led_pin_blue 12
 #define led_pin_green 11
@@ -15,6 +16,7 @@
 #define C3 2
 #define C4 1
 
+//Matriz de Mapeamento formato [colunas] x [linhas]
 char MatrizMapeamento [4][4] = {
     {'1','2','3','A'},
     {'4','5','6','B'},
@@ -24,12 +26,17 @@ char MatrizMapeamento [4][4] = {
 
 //Protótipos das Funções
 void inicializar();
+int AcharLinha();
+int AcharColuna();
 
 int main() {
-
+    int linha,coluna;
     inicializar();
     
      while (true) {
+      coluna = AcharColuna();
+      linha = AcharLinha();
+        
       
     }
 }
@@ -85,4 +92,28 @@ void inicializar(){
     gpio_init(C4);
     gpio_set_dir(C4, GPIO_IN);
     gpio_pull_down(C4);
+}
+int AcharLinha(){
+    int linha = nenhuma;
+    if (gpio_get(R1))
+        linha = 0;
+    else if (gpio_get(R2))
+        linha = 1;
+    else if (gpio_get(R3))
+        linha = 2;
+    else if (gpio_get(R4))
+        linha = 3;
+    return linha;
+}
+int AcharColuna(){
+    int coluna = nenhuma;
+    if (gpio_get(C1))
+        coluna = 0;
+    else if (gpio_get(C2))
+        coluna = 1;
+    else if (gpio_get(C3))
+        coluna = 2;
+    else if (gpio_get(C4))
+        coluna = 3;
+    return coluna;
 }
