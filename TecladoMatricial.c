@@ -15,6 +15,13 @@
 #define C3 2
 #define C4 1
 
+char MatrizMapeamento [4][4] = {
+    {'1','2','3','A'},
+    {'4','5','6','B'},
+    {'7','8','9','C'},
+    {'*','0','#','D'}
+};
+
 //Protótipos das Funções
 void inicializar();
 
