@@ -70,6 +70,9 @@ O teclado é mapeado da seguinte forma:<br/>
 4. Conecte os componentes conforme descrito nas conexões.
 5. Execute o código e interaja com o teclado.
 
+### Simulador Online 
+https://wokwi.com/projects/420450407429818369
+
 ### Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir um problema ou enviar um pull request.
