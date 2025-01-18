@@ -56,8 +56,8 @@
       }
     ],
     "connections": [
-      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
-      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      ["pico:GP0","$serialMonitor:RX","",[]],
+      ["pico:GP1","$serialMonitor:TX","",[]],
       [ "pico:GP21", "bz1:2", "red", [ "h0" ] ],
       [ "pico:GND.6", "bz1:1", "black", [ "h0" ] ],
       [ "keypad1:C4", "pico:GP28", "gold", [ "h143.7", "v-38.4", "h105.6", "v80.05" ] ],

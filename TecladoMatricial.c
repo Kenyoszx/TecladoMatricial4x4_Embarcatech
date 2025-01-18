@@ -25,6 +25,8 @@ char MatrizMapeamento [numLinhas][numColunas] = {
     {'*','0','#','D'}
 };
 
+char ultimaTecla = 'X';
+
 //Protótipos das Funções
 void inicializar();
 char AcharDigito();
@@ -32,11 +34,11 @@ void Processar(char);
 
 
 int main() {
-    int tecla;
-    stdio_init_all;
+    char tecla;
+    stdio_init_all();
     inicializar();
     
-     while (true) {
+    while (true) {
         tecla = AcharDigito();
         Processar(tecla);
 }
@@ -120,8 +122,15 @@ char AcharDigito() {
     return '\0';
 }
 void Processar(char tecla){
+    
     if (tecla != '\0'){
-        printf("Tecla %c Pressionada",tecla);
+
+        //escreve a tecla somente se for diferente da ultima pressionada, evitando leituras repetidas 
+        if (ultimaTecla != tecla)
+            printf("Tecla %c Pressionada\n",tecla);
+        ultimaTecla = tecla;
+
+        //caso seja uma das teclas especiais executa as ações
         switch (tecla){
         case 'A':
             gpio_put(led_pin_red,1);
@@ -144,6 +153,8 @@ void Processar(char tecla){
             break;
             }
         }
+
+        //se nenhuma tecla estiver sendo pressionada desliga todos os leds e o buzzer
         else
         {
             gpio_put(led_pin_red,0);
