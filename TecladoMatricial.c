@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-//definindo funçoes de cada pino, valor de erro e Numero de linhas e colunas
+//definindo Número de cada pino e Numero de linhas e colunas
 #define numLinhas 4
 #define numColunas 4
-#define nenhuma -1
 #define led_pin_red 13
 #define led_pin_blue 12
 #define led_pin_green 11
@@ -18,8 +17,8 @@
 #define C3 2
 #define C4 28
 
-//Matriz de Mapeamento formato [colunas] x [linhas]
-char MatrizMapeamento [4][4] = {
+//Matriz de Mapeamento
+char MatrizMapeamento [numLinhas][numColunas] = {
     {'1','2','3','A'},
     {'4','5','6','B'},
     {'7','8','9','C'},
