@@ -8,14 +8,14 @@
 #define led_pin_blue 12
 #define led_pin_green 11
 #define buzzer_pin 21
-#define R1 8
-#define R2 7
-#define R3 6
-#define R4 5
-#define C1 4
-#define C2 3
-#define C3 2
-#define C4 28
+#define R1 18
+#define R2 16
+#define R3 19
+#define R4 17
+#define C1 20
+#define C2 4
+#define C3 9
+#define C4 8
 
 //Matriz de Mapeamento
 char MatrizMapeamento [numLinhas][numColunas] = {
