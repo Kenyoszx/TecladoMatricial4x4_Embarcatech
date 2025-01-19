@@ -81,8 +81,11 @@ O teclado é mapeado da seguinte forma:<br/>
 4. Conecte os componentes conforme descrito nas conexões.
 5. Execute o código e interaja com o teclado.
 
-### Simulador Online 
+### Material online
+- Simulador WOKWI online:<br/>
 https://wokwi.com/projects/420450407429818369
+- Video de Descrição do funcionamento:<br/>
+https://drive.google.com/file/d/1RQe094qHIRQ_LHvQN7wkaYF8WQtW7Yhd/view?usp=drive_link
 
 ### Contribuições
 
