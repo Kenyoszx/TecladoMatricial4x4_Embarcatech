@@ -45,14 +45,25 @@ O teclado é mapeado da seguinte forma:<br/>
 - Teclado matricial 4x4
 - LEDs (vermelho, azul, verde)
 - Buzzer
-- Resistores (se necessário)
+- Resistores 
 - Fios de conexão
 
 ### Conexões
 
-- **Pinos do Teclado**:
-  - Linhas: R1, R2, R3, R4
-  - Colunas: C1, C2, C3, C4
+- **Pinos do Teclado**:<br/>
+  No código os pinos estão adaptados para serem conectados nas conexõoes disponíveis na placa educacional
+  BitDogLab 6.4, mas caso esteja usando somente o microcontrolador rp2040 deve-se adaptar a numeração dos pinos para a conexão
+  usada no hardware.<br/>
+  - Linhas:
+  - R1 = 18
+  - R2 = 16
+  - R3 = 19
+  - R4 = 17 
+  - Colunas:
+  - C1 = 20
+  - C2 = 4
+  - C3 = 9
+  - C4 = 8
 
 - **Pinos dos LEDs**:
   - LED Vermelho: `led_pin_red` (pino 13)
