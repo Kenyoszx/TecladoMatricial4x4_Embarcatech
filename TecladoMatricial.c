@@ -39,6 +39,7 @@ int main() {
     inicializar();
     
     while (true) {
+        sleep_ms(200);
         tecla = AcharDigito();
         Processar(tecla);
 }
@@ -105,17 +106,41 @@ char AcharDigito() {
 
         // Coloca a linha atual em nível baixo
         switch (linha) {
-            case 0: gpio_put(R1, 0); break;
-            case 1: gpio_put(R2, 0); break;
-            case 2: gpio_put(R3, 0); break;
-            case 3: gpio_put(R4, 0); break;
+            case 0: 
+                gpio_put(R1, 0);
+                sleep_ms(50); 
+                break;
+            case 1: 
+                gpio_put(R2, 0);
+                sleep_ms(50); 
+                break;
+            case 2: 
+                gpio_put(R3, 0);
+                sleep_ms(50); 
+                break;
+            case 3: 
+                gpio_put(R4, 0);
+                sleep_ms(50); 
+                break;
         }
 
         // Verifica as colunas
-        if (!gpio_get(C1)) return MatrizMapeamento[linha][0];
-        if (!gpio_get(C2)) return MatrizMapeamento[linha][1];
-        if (!gpio_get(C3)) return MatrizMapeamento[linha][2];
-        if (!gpio_get(C4)) return MatrizMapeamento[linha][3];
+            if (!gpio_get(C1)){
+      
+      return MatrizMapeamento[linha][0];
+      }
+    if (!gpio_get(C2)){
+      
+      return MatrizMapeamento[linha][1];
+      }
+    if (!gpio_get(C3)){
+      
+      return MatrizMapeamento[linha][2];
+      }
+    if (!gpio_get(C4)){
+      
+      return MatrizMapeamento[linha][3];
+      }
     }
 
     // Retorna um caractere nulo caso nenhuma tecla tenha sido pressionada
